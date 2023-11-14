@@ -354,7 +354,83 @@ tan solo esta preparada por si necesita que se inicie.
 
 cadenaOpcional = cadena //asigna un valor a cadenaopcional
 cadena = cadenaOpcional //falla
+let edadSeñora = 41
+if edadSeñora == 40
+{
+print("La señora tiene 40 años")
+}else{
+print("La señora tiene \(edadSeñora) años")
+}
+var miNombre = "Ivan"
+print("Hola que tal \(miNombre)?”)
+let multilinea2 = """
+Hola
+caracola
+
+}
 ```
+
+## Variables calculadas : 
+```swift
+Opción tipica:
+var ancho: Intvar alto: Int
+func centro() -> (x:Int, y:Int){
+    (ancho/2, alto/2)
+    }
+    ancho = 1
+    alto = 1
+    centro()
+    Opción con variantes calculadas:
+    var ancho: Int
+    var alto: Int
+    ancho = 1a
+    lto = 2
+    var centro: (Int, Int) {
+        (ancho/2 , alto/2)
+        }
+        
+    centro
+´´´
+
+##Tuplas
+```swift
+una tupla es una agrupacion de datos
+var peli1 = "Interstellar" 
+//es una cadena
+var peli2 = ("Interstellar", 2014, 9.8) //es una tupla, incluye titulo, año y puntuacion
+peli2 // devuelve el primer componente
+peli2.1 // devuelve el segundo componente
+peli2.2 // devuelve el tercer componentevar 
+peli3: (String, Int, Double)//Tambien podría ser peli3: (titulo:String, año: Int, puntuación: Double)
+peli3 = ("Tenet", 2020, 9.7)//podemos etiquetar los componentesvar 
+peli4: (titulo:String, año: Int, puntuacion: Double)peli4 = ("Star Wars", 1977, 9.7)peli4.titulo//se puede descomponerlet (pelicula, año, puntuacion) = peli3let (pelicula2, _, _) = peli3 //solo recojo el titulo
+
+Mas ejemplos :
+//se puede descomponer
+let (pelicula, año, puntuacion) = movie3let (pelicula2, _, _) = movie3 //solo recojo el titulo
+switch movie3 {
+    case (_,2020,_):
+    print("Peli de 2020")
+    fallthrough //si ponemos eso pasa al siguiente case sin evaluarlo
+    case (_, _, 9.7): 
+    print ("tiene la puntuacion de 9.7")
+    case (_,2020, let score) 
+    where score > 9: //cojo el tercer dato y lo metoen una constante llamada score, y compruebo que sea mayor que 9print ("Es una peli de 2020 y puntuacion mayor que 9")
+    
+    default: ()}
+
+Mas ejemplos :
+
+//se iguala a un patron
+if case(_, 2014, _) = movie2 {
+    print("La peli es de 2014")
+    }if case(_, 2020, let score) = movie3 , score > 9 {
+        print("La peli es de 2020 con mas de 9")
+        }let a = 1let b = 2let c = 3//es igual que
+        var (d,e,f,g,h) = (4,5,6,7,8)//si quiero cambiar 2 valores por ejemplo 
+        d = g y g = d(d,g) = (g,d)
+```
+
 ## Protocolos
 ```swift
 let cositas: [Any] = [1,2,"Hola","Adios", true]
